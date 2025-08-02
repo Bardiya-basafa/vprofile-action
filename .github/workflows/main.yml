@@ -26,7 +26,6 @@ jobs:
 
       - name: sonarqube scan
         uses: sonar-scanner
-             -Dsonar.host.url=${{secrets.SONAR_URL}}
              -Dsonar.login=${{secrets.SONAR_TOKEN}}
              -Dsonar.organiziation=${{secrets.SONAR_ORGANIZATION}}
              -Dsonar.projectkey=${{secrets.SONAR_PROJECT_KEY}}
@@ -42,4 +41,6 @@ jobs:
         timeout-minutes: 5
         env:
           SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
-          SONAR_HOST_URL: ${{secrets.SONAR_URL}}
+          # SONAR_HOST_URL: ${{secrets.SONAR_URL}}
+
+            #  -Dsonar.host.url=${{secrets.SONAR_URL}}
