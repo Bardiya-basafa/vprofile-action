@@ -4,7 +4,7 @@ pipeline {
 /*	
 	tools {
         maven "maven3"
-	
+	dmf
     }
 */	
     environment {
